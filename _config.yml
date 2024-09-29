@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Pfcfpy
-email: your-email@example.com
+title: unitrade
+email: pfc.ec@uni-psg.com
 description: >- # this means to ignore newlines until "baseurl:"
   test 
-domain: samantha-pan.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://samantha-pan.github.io/  # the base hostname and protocol for your site, e.g. http://example.com
+domain: pfcec.github.io      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://pfcec.github.io/unitrade/ # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: "/pfcftest"      # place folder name if the site is served in a subfolder
 # Build settings 
 theme: just-the-docs 
