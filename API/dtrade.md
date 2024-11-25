@@ -770,7 +770,7 @@ class DQueryReplyResponse()
 
 #### data
 
-回報集合 [DOrderReply]({{ "/API/dtrade#ddata.DOrderReply" | relative_url }}) List
+回報集合 List[OrderReply]
 
 <a id="ddata.DQueryMatchResponse"></a>
 
@@ -799,5 +799,5 @@ class DQueryMatchResponse()
 
 #### data
 
-成回集合 [DMatchReply]({{ "/API/dtrade#ddata.DMatchReply" | relative_url }}) List
+成回集合 List[MatchReply]
 

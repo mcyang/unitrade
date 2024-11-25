@@ -6,7 +6,7 @@ title: "pfcf"
 <link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
 統一期貨API元件
 
-<a id="pfcf.LoginResponse"></a>
+<a id="unitrade.LoginResponse"></a>
 
 ## LoginResponse Objects
 
@@ -17,75 +17,75 @@ class LoginResponse()
 
 登入回覆物件
 
-<a id="pfcf.LoginResponse.ok"></a>
+<a id="unitrade.LoginResponse.ok"></a>
 
 #### ok
 
 是否成功
 
-<a id="pfcf.LoginResponse.error"></a>
+<a id="unitrade.LoginResponse.error"></a>
 
 #### error
 
 錯誤訊息
 
-<a id="pfcf.Pfcf"></a>
+<a id="unitrade.Unitrade"></a>
 
-## Pfcf Objects
+## Unitrade Objects
 
 ```python
-class Pfcf()
+class Unitrade()
 ```
 
-<a id="pfcf.Pfcf.login_status_flag"></a>
+<a id="unitrade.Unitrade.login_status_flag"></a>
 
 #### login\_status\_flag
 
 登入旗標 True:登入 False:未登入
 
-<a id="pfcf.Pfcf.dtrade"></a>
+<a id="unitrade.Unitrade.dtrade"></a>
 
 #### dtrade
 
 內期交易元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.ftrade"></a>
+<a id="unitrade.Unitrade.ftrade"></a>
 
 #### ftrade
 
 外期交易元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.dquote"></a>
+<a id="unitrade.Unitrade.dquote"></a>
 
 #### dquote
 
 內期報價元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.fquote"></a>
+<a id="unitrade.Unitrade.fquote"></a>
 
 #### fquote
 
 外期報價元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.daccount"></a>
+<a id="unitrade.Unitrade.daccount"></a>
 
 #### daccount
 
 內期帳務元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.faccount"></a>
+<a id="unitrade.Unitrade.faccount"></a>
 
 #### faccount
 
 外期帳務元件(必需登入才可以使用)
 
-<a id="pfcf.Pfcf.on_error"></a>
+<a id="unitrade.Unitrade.on_error"></a>
 
 #### on\_error
 
 錯誤事件
 
-<a id="pfcf.Pfcf.login"></a>
+<a id="unitrade.Unitrade.login"></a>
 
 #### login
 
@@ -111,7 +111,7 @@ def login(url, userid, password, ca_path, ca_password) -> LoginResponse
 | bool | True 成功 /False 失敗 |    
 | str | 錯誤訊息 |
 
-<a id="pfcf.Pfcf.logout"></a>
+<a id="unitrade.Unitrade.logout"></a>
 
 #### logout
 
@@ -121,7 +121,7 @@ def logout()
 
 登出
 
-<a id="pfcf.Pfcf.get_domestic_products"></a>
+<a id="unitrade.Unitrade.get_domestic_products"></a>
 
 #### get\_domestic\_products
 
@@ -132,7 +132,7 @@ def get_domestic_products()
 取得內期商品檔
 ##### Returns DomesticProducts
 
-<a id="pfcf.Pfcf.get_foreign_products"></a>
+<a id="unitrade.Unitrade.get_foreign_products"></a>
 
 #### get\_foreign\_products
 
@@ -143,7 +143,7 @@ def get_foreign_products()
 取得外期商品檔
 ##### Returns ForeignProducts
 
-<a id="pfcf.Pfcf.get_exchanges"></a>
+<a id="unitrade.Unitrade.get_exchanges"></a>
 
 #### get\_exchanges
 
@@ -154,7 +154,7 @@ def get_exchanges()
 取得外期交易所
 ##### Returns EXCHANGE
 
-<a id="pfcf.Pfcf.get_domestic_contracts"></a>
+<a id="unitrade.Unitrade.get_domestic_contracts"></a>
 
 #### get\_domestic\_contracts
 
@@ -178,7 +178,7 @@ def get_domestic_contracts(symbol, type) -> DomesticContractResponse
 | str | 錯誤訊息 |    
 | DomesticContract | 商品合約資料 |
 
-<a id="pfcf.Pfcf.get_foreign_contracts"></a>
+<a id="unitrade.Unitrade.get_foreign_contracts"></a>
 
 #### get\_foreign\_contracts
 
@@ -203,7 +203,7 @@ def get_foreign_contracts(exchange, symbol, type) -> ForeignContractResponse
 | str | 錯誤訊息 |    
 | ForeignContract | 商品合約資料 |
 
-<a id="pfcf.Pfcf.get_accounts"></a>
+<a id="unitrade.Unitrade.get_accounts"></a>
 
 #### get\_accounts
 

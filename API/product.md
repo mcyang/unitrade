@@ -55,7 +55,12 @@ CP
 #### premium
 
 參考價
- 
+
+---  
+nav_order: 1
+parent: API Reference  
+title: "product"
+--- 
 <link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
 <a id="domesticproduct.DomesticProduct"></a>
 
@@ -102,7 +107,12 @@ class DomesticProduct()
 #### strike\_price\_decimal\_locator
 
 選擇權履約價小數位
- 
+
+---  
+nav_order: 1
+parent: API Reference  
+title: "product"
+--- 
 <link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
 <a id="foreigncontract.ForeignContract"></a>
 
@@ -156,7 +166,11 @@ call put
 
 最後交易日
 
-
+---  
+nav_order: 1
+parent: API Reference  
+title: "product"
+--- 
 <link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
 <a id="foreignproduct.ForeignProduct"></a>
 
@@ -209,8 +223,12 @@ class ForeignProduct()
 #### currency
 
 幣別
- 
- 
+
+---  
+nav_order: 1
+parent: API Reference  
+title: "product"
+--- 
 <link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
 <a id="exchange.EXCHANGE"></a>
 
