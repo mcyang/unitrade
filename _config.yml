@@ -24,11 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   test 
 domain: pfcec.github.io      # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://pfcec.github.io/unitrade/ # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: "/pfcftest"      # place folder name if the site is served in a subfolder
+baseurl: "/unitrade"      # place folder name if the site is served in a subfolder
 # Build settings 
 theme: just-the-docs 
 custom_css:
-  - assets/css/custom.css
+  - assets/css/just-the-docs-custom.css
 plugins: 
   - jekyll-feed
   - jekyll-seo-tag

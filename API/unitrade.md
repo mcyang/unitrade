@@ -3,7 +3,7 @@ nav_order: 0
 parent: API Reference  
 title: "unitrade"
 --- 
-<link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/just-the-docs-custom.css">
 統一期貨API元件
 
 <a id="unitrade.LoginResponse"></a>
