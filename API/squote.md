@@ -3,7 +3,7 @@ nav_order: 4
 parent: API Reference  
 title: "squote"
 --- 
-<link rel="stylesheet" href="{ site.baseurl }/assets/css/just-the-docs-custom.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/just-the-docs-custom.css"> 
 現貨行情
 註冊接收即時和查詢
 
