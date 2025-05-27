@@ -3,7 +3,7 @@ nav_order: 4
 parent: API Reference  
 title: "squote"
 --- 
-<link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
+<link rel="stylesheet" href="{ site.baseurl }/assets/css/just-the-docs-custom.css">
 現貨行情
 註冊接收即時和查詢
 
@@ -197,7 +197,7 @@ TickDataOpenCloseResponse
 #### query\_otc\_base\_data
 
 ```python
-def query_otc_base_data(item) -> BaseDataResponse
+def query_otc_base_data(item) -> OTCBaseDataResponse
 ```
 
 查詢otc普通個股基本資料
@@ -208,7 +208,7 @@ def query_otc_base_data(item) -> BaseDataResponse
 | item | str | 股票代碼 |      
 
 ##### Returns 
-BaseDataResponse
+OTCBaseDataResponse
 
 <a id="squote.SQuote.query_otc_tick_data"></a>
 
@@ -667,8 +667,8 @@ nav_order: 4
 parent: API Reference  
 title: "squote"
 --- 
-<link rel="stylesheet" href="/assets/css/just-the-docs-custom.css">
-外期行情物件
+<link rel="stylesheet" href="{ site.baseurl }/assets/css/just-the-docs-custom.css">
+現貨行情物件
 
 <a id="sdata.BaseData"></a>
 
@@ -789,6 +789,125 @@ class BaseData()
 
 交易幣別代號 str
 
+<a id="sdata.OTCBaseData"></a>
+
+## OTCBaseData Objects
+
+```python
+@dataclass
+class OTCBaseData()
+```
+
+上櫃股票個股基本資料
+
+<a id="sdata.OTCBaseData.stock_code"></a>
+
+#### stock\_code
+
+股票代號 str
+
+<a id="sdata.OTCBaseData.product_name"></a>
+
+#### product\_name
+
+商品名稱 str
+
+<a id="sdata.OTCBaseData.industry"></a>
+
+#### industry
+
+產業別 str
+
+<a id="sdata.OTCBaseData.security_type"></a>
+
+#### security\_type
+
+證券別 str
+
+<a id="sdata.OTCBaseData.stock_abnormal_code"></a>
+
+#### stock\_abnormal\_code
+
+股票異常代碼 str
+
+<a id="sdata.OTCBaseData.stock_type"></a>
+
+#### stock\_type
+
+類股註記 str
+
+<a id="sdata.OTCBaseData.reference_price"></a>
+
+#### reference\_price
+
+參考價 float
+
+<a id="sdata.OTCBaseData.upper_limit_price"></a>
+
+#### upper\_limit\_price
+
+漲停價 float
+
+<a id="sdata.OTCBaseData.lower_limit_price"></a>
+
+#### lower\_limit\_price
+
+跌停價 float
+
+<a id="sdata.OTCBaseData.non_10_denomination"></a>
+
+#### non\_10\_denomination
+
+非10元面額 bool
+
+<a id="sdata.OTCBaseData.abnormal_recommendation_note"></a>
+
+#### abnormal\_recommendation\_note
+
+異常推介個股註記 str
+
+<a id="sdata.OTCBaseData.special_abnormal_security_note"></a>
+
+#### special\_abnormal\_security\_note
+
+特殊異常證券註記 str
+
+<a id="sdata.OTCBaseData.day_trading_note"></a>
+
+#### day\_trading\_note
+
+可現股當沖註記 str
+
+<a id="sdata.OTCBaseData.exempt_short_selling_note"></a>
+
+#### exempt\_short\_selling\_note
+
+豁免平盤下融券賣出註記 str
+
+<a id="sdata.OTCBaseData.exempt_borrowing_short_selling_note"></a>
+
+#### exempt\_borrowing\_short\_selling\_note
+
+豁免平盤下借券賣出註記 str
+
+<a id="sdata.OTCBaseData.matching_cycle_seconds"></a>
+
+#### matching\_cycle\_seconds
+
+搓合循環秒數 int
+
+<a id="sdata.OTCBaseData.trading_unit"></a>
+
+#### trading\_unit
+
+交易單位 int
+
+<a id="sdata.OTCBaseData.trading_currency_code"></a>
+
+#### trading\_currency\_code
+
+交易幣別代號 str
+
 <a id="sdata.TickData"></a>
 
 ## TickData Objects
@@ -816,13 +935,13 @@ class TickData()
 
 #### limit\_up\_down\_note
 
-漲跌停註記 str
+漲跌停註記 str (0: 一般 64:跌停成交 128:漲停成交)
 
 <a id="sdata.TickData.status_note"></a>
 
 #### status\_note
 
-狀態註記 str
+狀態註記 str(4:收盤揭示 8:開盤揭示 16:逐筆撮合 32:延後收盤 64:延後開盤 128:試撮揭示 256:集合競價 512:一般揭示)
 
 <a id="sdata.TickData.cumulative_volume"></a>
 
@@ -1159,4 +1278,33 @@ class IndexDataResponse()
 #### data
 
 回覆物件 IndexData
+
+<a id="sdata.OTCBaseDataResponse"></a>
+
+## OTCBaseDataResponse Objects
+
+```python
+@dataclass
+class OTCBaseDataResponse()
+```
+
+查詢上櫃股票個股基本資料回覆物件
+
+<a id="sdata.OTCBaseDataResponse.ok"></a>
+
+#### ok
+
+是否成功 bool
+
+<a id="sdata.OTCBaseDataResponse.error"></a>
+
+#### error
+
+錯誤訊息 str
+
+<a id="sdata.OTCBaseDataResponse.data"></a>
+
+#### data
+
+回覆物件 OTCBaseData
 
